@@ -54,3 +54,14 @@ Every change reaches `main` through a pull request. Nobody pushes to `main`.
   ```
 
 - Pull requests merge by squash or rebase only. There are no merge commits.
+
+## Releases
+
+[Release Please](https://github.com/googleapis/release-please) keeps a release
+pull request open with the next version and the changelog. Merging it tags the
+version. It owns `CHANGELOG.md`; nobody edits that file by hand.
+
+The release pull request is authored by the `braveheart-chess-release-bot`
+GitHub App, the organisation's release bot, so CI runs on it. The workflow
+reads the app's credentials from the secrets `RELEASE_BOT_CLIENT_ID` and
+`RELEASE_BOT_PRIVATE_KEY`.
