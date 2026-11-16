@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="logo.png" alt="Braveheart logo" width="280">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Braveheart-Chess/braveheart-branding/main/banner-dark.png">
+    <img src="https://raw.githubusercontent.com/Braveheart-Chess/braveheart-branding/main/banner-light.png" alt="Braveheart" width="640">
+  </picture><br>
+  <sub>Logo © the artist, used under licence. All rights reserved; not covered by this repository's licence (<a href="https://github.com/Braveheart-Chess/braveheart-branding#licence">details</a>).</sub>
 </p>
 
 # braveheart-branding
@@ -40,8 +44,28 @@ is limited.
 | `logo.svg`, `logo-small.svg` | Vector | Transparent | Both marks traced to flat-colour paths, for anywhere that wants an SVG (an IDE project icon, print, large sizes). |
 | `avatar.png` | 1024×1024 | White | Profile pictures (GitHub org or user avatar, other sites); padded so a circular crop keeps the whole head. |
 | `social-preview.png` | 1280×640 | White | GitHub repository social preview (the link card on Slack, X, Discord and so on). |
+| `banner-light.png`, `banner-dark.png` | 1280×360 | Transparent | The README banner every Braveheart-Chess repository opens with: the big mark and the wordmark, with dark lettering for GitHub's light theme and light lettering for its dark theme. |
 | `favicon-32.png`, `favicon-64.png`, `favicon-180.png` | 32, 64, 180 px | Transparent | Favicons and the Apple touch icon, from the small mark. |
 | `original/` | 1206×1609 | White | The artist's original files, unchanged apart from the lowercase extension. |
+
+## The README banner
+
+Every Braveheart-Chess repository's README opens with the same banner, then its
+own contents. Paste this at the top, above the `#` heading:
+
+```html
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Braveheart-Chess/braveheart-branding/main/banner-dark.png">
+    <img src="https://raw.githubusercontent.com/Braveheart-Chess/braveheart-branding/main/banner-light.png" alt="Braveheart" width="640">
+  </picture><br>
+  <sub>Logo © the artist, used under licence. All rights reserved; not covered by this repository's licence (<a href="https://github.com/Braveheart-Chess/braveheart-branding#licence">details</a>).</sub>
+</p>
+```
+
+The `<picture>` element shows `banner-dark.png` to readers in GitHub's dark
+theme and `banner-light.png` to everyone else. Change the banner here, with
+[`scripts/make_banner.py`](scripts/make_banner.py), and every README follows.
 
 ## Linking to the images
 
@@ -89,7 +113,15 @@ original stretches the PNG's crop, and the trace drops it. To regenerate:
 .venv/bin/python scripts/make_svg.py original .
 ```
 
-Build the venv with Python 3.12 for this: vtracer 0.6.15 crashed under
+The banners are composed from `logo.png` by
+[`scripts/make_banner.py`](scripts/make_banner.py), with Arial Black and Arial
+Bold from macOS:
+
+```sh
+.venv/bin/python scripts/make_banner.py logo.png .
+```
+
+Build the venv with Python 3.12 for the SVGs: vtracer 0.6.15 crashed under
 Python 3.15.
 
 ## Licence

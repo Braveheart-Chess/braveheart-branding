@@ -26,6 +26,8 @@ PNGS = {
     "favicon-32.png": (32, 32, True),
     "favicon-64.png": (64, 64, True),
     "favicon-180.png": (180, 180, True),
+    "banner-light.png": (1280, 360, True),
+    "banner-dark.png": (1280, 360, True),
 }
 SVGS = {"logo.svg": (1024, 1024), "logo-small.svg": (1024, 1024)}
 JPEGS = {"original/braveheart-logo-big.jpg", "original/braveheart-logo-small.jpg"}
