@@ -19,6 +19,21 @@ The hooks are a convenience. CI is the authoritative check.
 | --- | --- | --- |
 | `Commit messages` | commitlint over every commit in `base..head` | `npx commitlint --from origin/main --to HEAD --verbose` |
 | `PR title` | The title is a Conventional Commit | |
+| `Assets` | Every image is present, at its published size, with a transparent background where it should have one | `python3 tools/check-assets.py` |
+
+## Changing the images
+
+- Every PNG and SVG is derived from the artist's files in `original/` by the
+  scripts in `scripts/`; [README.md](README.md#regenerating-the-images) has
+  the commands. Change a script and regenerate. Never edit a derived image by
+  hand, and never change `original/`.
+- Other repositories link to the images by path, so file names, sizes and
+  transparent backgrounds stay put. Changing one is a breaking change
+  (`feat!:` or `fix!:`); see [Linking to the images](README.md#linking-to-the-images).
+- A new image goes in the Files table in `README.md` and in
+  `tools/check-assets.py`.
+- Say in the pull request how the images look, in GitHub's light and dark
+  themes where transparency matters.
 
 ## Commit messages
 

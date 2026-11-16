@@ -22,6 +22,18 @@ ones you MUST follow.
   The PR title MUST be a valid Conventional Commit; squash merges use it as the commit message.
 - **Merges are squash or rebase only.** Never create merge commits.
 - **Run the repo's checks locally before opening the PR** (see below).
+- **Image paths are a contract.** Other repositories link to the images by
+  path (the engine's README shows `logo.png` from `main`). Never rename,
+  resize or remove one, or flatten a transparent background, without the
+  owner's say-so; when it does happen it is a breaking change (`feat!:` or
+  `fix!:`) and the PR names every repository that links to the file.
+- **Derived images come from the scripts.** Every PNG and SVG is made from
+  `original/` by `scripts/`. Change a script and regenerate; never edit a
+  derived image by hand, and never touch `original/`.
+- **No new artwork without the owner.** Add no image that is not derived from
+  `original/`, and never change the licence terms in `LICENSE`.
+- **A new image is listed twice**: in the Files table in `README.md` and in
+  `tools/check-assets.py`, which fails on an image it does not list.
 - **`CHANGELOG.md` is Release Please's.** Never edit it by hand.
 
 ## Before opening a PR
@@ -30,9 +42,10 @@ ones you MUST follow.
 npm ci
 npx commitlint --from origin/main --to HEAD --verbose
 pre-commit run --all-files
+python3 tools/check-assets.py   # every image present, at its published size
 ```
 
 ## Things that need the owner
 
-Repository settings and secrets, the release bot, and merging the Release
-Please PR. List them in the PR instead of attempting them.
+Repository settings and secrets, the release bot, merging the Release Please
+PR, new artwork, and anything about the artist's licence. List them in the PR instead of attempting them.
