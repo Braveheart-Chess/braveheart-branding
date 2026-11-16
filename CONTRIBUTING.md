@@ -80,3 +80,4 @@ The release pull request is authored by the `braveheart-chess-release-bot`
 GitHub App, the organisation's release bot, so CI runs on it. The workflow
 reads the app's credentials from the secrets `RELEASE_BOT_CLIENT_ID` and
 `RELEASE_BOT_PRIVATE_KEY`.
+
