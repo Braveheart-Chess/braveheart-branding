@@ -7,3 +7,6 @@ only the engine; its branding lives here.
 
 The artwork is all rights reserved and is not open source. The code is MIT
 licensed. See [LICENSE](LICENSE).
+
+To contribute, see [CONTRIBUTING.md](CONTRIBUTING.md); coding agents also read
+[AGENTS.md](AGENTS.md).

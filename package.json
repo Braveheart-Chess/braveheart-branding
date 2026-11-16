@@ -1,0 +1,17 @@
+{
+  "name": "braveheart-branding",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Tooling for commit message linting. The branding itself is the images and the Python scripts that make them; see README.md.",
+  "type": "module",
+  "scripts": {
+    "commitlint": "commitlint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.3"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
