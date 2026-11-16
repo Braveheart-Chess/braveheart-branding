@@ -1,0 +1,8 @@
+# Node (commitlint)
+node_modules/
+
+# The Python virtualenv the scripts run in
+.venv/
+__pycache__/
+
+.DS_Store
