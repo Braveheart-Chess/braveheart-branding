@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Braveheart-Chess/braveheart-branding/compare/v0.2.0...v0.2.1) (2026-11-22)
+
+
+### Bug Fixes
+
+* **repo:** let dependabot's capitalised bump titles pass ([#9](https://github.com/Braveheart-Chess/braveheart-branding/issues/9)) ([a6eef08](https://github.com/Braveheart-Chess/braveheart-branding/commit/a6eef0803806fa7dfe8e88a50b4c4e774d684215))
+
 ## [0.2.0](https://github.com/Braveheart-Chess/braveheart-branding/compare/v0.1.0...v0.2.0) (2026-11-22)
 
 
