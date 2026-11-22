@@ -5,7 +5,8 @@
   "description": "Tooling for commit message linting. The branding itself is the images and the Python scripts that make them; see README.md.",
   "type": "module",
   "scripts": {
-    "commitlint": "commitlint"
+    "commitlint": "commitlint",
+    "test:commitlint": "node --test \"tools/commitlint/*.test.mjs\" && bash scripts/test-commitlint.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^21.2.4",
